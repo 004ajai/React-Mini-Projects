@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #F9FAFB;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(30, 41, 59, 0.6);
+  color: #9CA3AF;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #2D3748;
+  color: #E5E7EB;
+}
+
+.tab-active {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.tab-icon {
+  font-size: 20px;
+}
+
+/* Main Content */
+.main {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 520px;
+  padding: 16px 24px;
+  background-color: #2D3E50;
+  border: none;
+  border-radius: 8px;
+  color: #F9FAFB;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 32px;
+}
+
+.search-input::placeholder {
+  color: #6B7280;
+}
+
+/* Weather View */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Current Weather */
+.current-weather {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.city-name {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.temp-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.temp-value {
+  font-size: 140px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+/* Sun Icon */
+.sun-icon {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sun-center {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FDB813 0%, #F59E0B 100%);
+  box-shadow: 0 0 60px rgba(253, 184, 19, 0.5);
+  position: absolute;
+}
+
+.sun-ray {
+  position: absolute;
+  width: 10px;
+  height: 32px;
+  background-color: #FDB813;
+  border-radius: 5px;
+}
+
+/* Card Styles */
+.card {
+  background-color: #1F2D3D;
+  border-radius: 20px;
+  padding: 28px;
+}
+
+.card-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #9CA3AF;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.see-more-btn {
+  background-color: #06B6D4;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #0891B2;
+}
+
+/* Hourly Forecast */
+.hourly-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.hourly-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 12px;
+  background-color: #2C3E50;
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+}
+
+.hourly-item:hover {
+  transform: translateY(-2px);
+}
+
+.hour-time {
+  font-size: 13px;
+  color: #9CA3AF;
+}
+
+.hour-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hour-temp {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Air Conditions */
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.condition-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.condition-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.condition-icon {
+  font-size: 20px;
+  color: #9CA3AF;
+}
+
+.condition-label {
+  font-size: 13px;
+  color: #9CA3AF;
+}
+
+.condition-value {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Week Forecast */
+.week-forecast {
+  background-color: #1F2D3D;
+  border-radius: 20px;
+  padding: 28px;
+  height: fit-content;
+}
+
+.week-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.day-item {
+  display: grid;
+  grid-template-columns: 70px 60px 1fr 100px;
+  align-items: center;
+  padding: 18px 16px;
+  gap: 16px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.day-item:hover {
+  background-color: rgba(45, 55, 72, 0.5);
+}
+
+.day-name {
+  font-size: 14px;
+  color: #E5E7EB;
+}
+
+.day-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.day-condition {
+  font-size: 14px;
+  color: #E5E7EB;
+  text-transform: capitalize;
+}
+
+.day-temp {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* Cities View */
+.cities-header {
+  margin-bottom: 32px;
+}
+
+.cities-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.city-card {
+  background-color: #1A2332;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.city-card-name {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.city-card-country {
+  font-size: 14px;
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.city-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 8px 0;
+}
+
+.city-card-temp {
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.city-card-condition {
+  font-size: 14px;
+  color: #9CA3AF;
+  text-transform: capitalize;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .week-forecast {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 16px;
+  }
+
+  .temp-value {
+    font-size: 80px;
+  }
+
+  .sun-icon {
+    width: 120px;
+    height: 120px;
+  }
+
+  .sun-center {
+    width: 70px;
+    height: 70px;
+  }
+
+  .hourly-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cities-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}

@@ -1,0 +1,49 @@
+.app{
+    min-height: 100%;
+    width: 100%;
+    transition: background 0.5s ease;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card{
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+    transform: translatey(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+}
+
+.cardTop{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emoji{
+    font-size: 50px;
+}
+
+.cardBottom{
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.content{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

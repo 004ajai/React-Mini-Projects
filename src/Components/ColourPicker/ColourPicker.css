@@ -1,0 +1,19 @@
+.color-input{
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.color-display{
+    width: 200px;
+    height: 100px;
+    border: 2px solid #ccc;
+    border-radius:10px ;
+    margin: auto;
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; */
+}

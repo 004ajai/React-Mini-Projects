@@ -1,0 +1,52 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap");
+
+.game-container {
+    padding: 50px;
+    text-align: center;
+    color: #fff;
+    background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+h1 {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 50px;
+    text-shadow: 3px 3px 10px #000;
+    margin-bottom: 30px;
+}
+
+.choices img {
+    width: 120px;
+    margin: 15px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 12px;
+    transition: all 0.3s ease 1s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.choices img:hover {
+    transform: scale(1.15) rotate(10deg);
+    border-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.score-board,
+#result {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px #000;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+.score-board span {
+    color: #ffd700;
+    text-shadow: 1px 1px 3px #000;
+}
